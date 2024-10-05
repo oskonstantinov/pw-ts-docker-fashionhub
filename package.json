@@ -1,0 +1,22 @@
+{
+  "name": "pw-ts-docker-fashionhub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test_local": "environment=local npx playwright test",
+    "test_stage": "environment=stage npx playwright test",
+    "test_prod": "environment=prod npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.5"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "local": {
+      "baseUrl": "http://localhost:4000"
+  },
+  "stage": {
+      "baseUrl": "https://staging-env"
+  },
+  "prod": {
+      "baseUrl": "https://pocketaces2.github.io"
+  }
+}
