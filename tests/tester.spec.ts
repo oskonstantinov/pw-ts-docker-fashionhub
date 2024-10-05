@@ -1,6 +1,6 @@
 import { test } from '@playwright/test'
 import { PageManager } from '../pageobjects/pageManager'
-import { getBaseUrl}  from '../config.ts'
+import { getBaseUrl } from '../config.ts'
 
 test.afterEach(async ({ page }) => {
   page.close()

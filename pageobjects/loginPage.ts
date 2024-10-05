@@ -16,7 +16,7 @@ export class LoginPage extends HelperBase {
     this.usernameField = page.locator('#username')
     this.passwordField = page.locator('#password')
     this.loginButton = page.locator('[type="submit"]')
-    this.logoutButton = page.getByRole('button', {name: 'Logout'})
+    this.logoutButton = page.getByRole('button', { name: 'Logout' })
   }
 
   /**

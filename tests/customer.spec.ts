@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { PageManager } from '../pageobjects/pageManager';
 import data from '../test-data/data.json'
-import { getBaseUrl}  from '../config.ts'
+import { getBaseUrl } from '../config.ts'
 
 test.afterEach(async ({ page }) => {
   page.close()
