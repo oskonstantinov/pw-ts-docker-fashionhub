@@ -43,7 +43,7 @@ npm run test_local
 
 But if you would like to run same tests only for one browser with headed mode, you can execute:
 ```bash
-environment=local npx playwright test --project=chromium --headed
+env=local npx playwright test --project=chromium --headed
 ```
 
 # Run tests with UI:

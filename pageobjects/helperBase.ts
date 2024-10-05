@@ -2,6 +2,7 @@ import { Locator, Page, expect, APIRequestContext } from "@playwright/test"
 import CryptoJS from 'crypto-js'
 import testdata from '../test-data/data.json'
 import fs from 'fs'
+import config from '../config.json'
 
 export class HelperBase {
 
@@ -11,6 +12,17 @@ export class HelperBase {
   constructor(page: Page, requestContext: APIRequestContext) {
     this.page = page
     this.requestContext = requestContext
+  }
+
+  /**
+   * This method operate the baseUrl from configuration file.
+   * Use 'prod' value by default
+   * @returns baseUrl
+   */
+  public getBaseUrl(): string {
+    // use "prod" by default if environment variable is not set
+    const env = process.env.env || 'prod'
+    return config[env].baseUrl
   }
 
   /**
