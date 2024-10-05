@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test_local": "environment=local npx playwright test",
-    "test_stage": "environment=stage npx playwright test",
-    "test_prod": "environment=prod npx playwright test"
+    "test_local": "env=local npx playwright test",
+    "test_stage": "env=stage npx playwright test",
+    "test_prod": "env=prod npx playwright test"
   },
   "keywords": [],
   "author": "",
