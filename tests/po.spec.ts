@@ -13,8 +13,8 @@ test.describe('As a product owner,', () => {
     let allPullRequests: { prName: string, createdDate: string, author: string }[] = []
 
     // Open pull requests web page to identify how many pages we have in pagination block
-    await page.goto(pm.git().url)
-    const lastPageText = await pm.git().lastPageText.textContent()
+    await page.goto(pm.gitHubPullRequests().url)
+    const lastPageText = await pm.gitHubPullRequests().lastPageText.textContent()
     const num = Number(lastPageText)
 
     // Start from 1 to match the pagination

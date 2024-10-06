@@ -3,8 +3,9 @@ import { HelperBase } from "./helperBase"
 import { NavigationPage } from './navigationPage'
 import { HomePage } from "./homePage"
 import { LoginPage } from "./loginPage"
-import { GitPage } from "./gitPage"
+import { GitHubPullRequestsPage } from "./gitHubPullRequests"
 
+// manage page classes in one place to simplify imports in tests
 export class PageManager {
 
   private readonly page: Page
@@ -13,7 +14,7 @@ export class PageManager {
   private readonly homePage: HomePage
   private readonly navigationPage: NavigationPage
   private readonly loginPage: LoginPage
-  private readonly gitPage: GitPage
+  private readonly pullRequestsPage: GitHubPullRequestsPage
 
   constructor(page: Page, requestContext: APIRequestContext) {
     this.page = page
@@ -22,7 +23,7 @@ export class PageManager {
     this.navigationPage = new NavigationPage(this.page, this.requestContext)
     this.homePage = new HomePage(this.page, this.requestContext)
     this.loginPage = new LoginPage(this.page, this.requestContext)
-    this.gitPage = new GitPage(this.page, this.requestContext)
+    this.pullRequestsPage = new GitHubPullRequestsPage(this.page, this.requestContext)
   }
 
   helper() {
@@ -41,7 +42,7 @@ export class PageManager {
     return this.loginPage
   }
 
-  git() {
-    return this.gitPage
+  gitHubPullRequests() {
+    return this.pullRequestsPage
   }
 }

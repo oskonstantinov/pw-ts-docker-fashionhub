@@ -1,7 +1,8 @@
 import { APIRequestContext, Locator, Page } from "@playwright/test"
 import { HelperBase } from "./helperBase"
 
-export class GitPage extends HelperBase {
+// page class for our GitHub repository, page with pull requests
+export class GitHubPullRequestsPage extends HelperBase {
 
   readonly url: string
   readonly lastPageText: Locator
