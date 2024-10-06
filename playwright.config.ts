@@ -14,6 +14,10 @@ import { defineConfig, devices} from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
+  /* Timeout for the whole test suite */
+  globalTimeout: 45000,
+  /* Timeout for the individual test case */
+  timeout: 20000,
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -34,6 +38,10 @@ export default defineConfig({
 
     /* Screenshot rule for the report */
     screenshot: 'only-on-failure',
+
+    /* Timeouts for element actions and navigation step */
+    actionTimeout: 5000,
+    navigationTimeout: 3000,
   },
 
   /* Configure projects for major browsers */
