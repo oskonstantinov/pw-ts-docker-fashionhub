@@ -35,7 +35,9 @@ test.describe('As a product owner,', () => {
       }
     }
 
-    // prepare data for CSV file row by row using reduce()
+    /* prepare data for CSV file row by row using reduce()
+    * not moved to reusable method in page object because we will depend from the source array structure
+    */
     const dataCSV = allPullRequests.reduce((row, pr) => {
       row += `${pr.prName}, ${pr.createdDate}, ${pr.author}\n`;
       return row

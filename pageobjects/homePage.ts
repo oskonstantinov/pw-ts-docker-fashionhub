@@ -1,6 +1,7 @@
 import { APIRequestContext, Locator, Page } from "@playwright/test"
 import { HelperBase } from "./helperBase"
 
+// class for the Home page /fashionhub/
 export class HomePage extends HelperBase {
 
   // 'readonly' is the same as 'final' in Java

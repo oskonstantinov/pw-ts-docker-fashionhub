@@ -2,6 +2,7 @@ import { APIRequestContext, expect, Locator, Page } from "@playwright/test"
 import { HelperBase } from "./helperBase"
 import testdata from '../test-data/data.json'
 
+// class for the Login page /fashionhub/login.html
 export class LoginPage extends HelperBase {
 
   readonly loginContainer: Locator

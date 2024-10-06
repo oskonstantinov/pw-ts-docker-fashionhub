@@ -4,6 +4,7 @@ import testdata from '../test-data/data.json'
 import fs from 'fs'
 import config from '../config.json'
 
+// the "root" class for all pages, containing universal methods
 export class HelperBase {
 
   readonly page: Page

@@ -1,6 +1,7 @@
 import { APIRequestContext, Locator, Page } from "@playwright/test"
 import { HelperBase } from "./helperBase"
 
+// class for the navigation bar
 export class NavigationPage extends HelperBase {
 
   // 'readonly' is the same as 'final' in Java
@@ -9,7 +10,7 @@ export class NavigationPage extends HelperBase {
 
   // accept 'page' attribute with type 'Page' from the tests to be sure that we use same browser instance as test
   constructor(page: Page, requestContext: APIRequestContext) {
-    // assign 'page' from the parent constructor of HelperBase
+    // assign 'page' and 'requestContext' from the parent constructor of HelperBase class
     super(page, requestContext)
     this.account = page.getByText('Account')
   }
