@@ -12,7 +12,7 @@ test.describe('As a product owner,', () => {
     // Initialize an array of objects to store all pull requests
     let allPullRequests: { prName: string, createdDate: string, author: string }[] = []
 
-    // Navigate to pull requests web page to identify how many pages we have in pagination block
+    // Open pull requests web page to identify how many pages we have in pagination block
     await page.goto(pm.git().url)
     const lastPageText = await pm.git().lastPageText.textContent()
     const num = Number(lastPageText)
@@ -35,11 +35,13 @@ test.describe('As a product owner,', () => {
       }
     }
 
+    // prepare data for CSV file row by row using reduce()
     const dataCSV = allPullRequests.reduce((row, pr) => {
       row += `${pr.prName}, ${pr.createdDate}, ${pr.author}\n`;
       return row
     }, `PR Name, Created Date, Author\n`) // column names for csv file
 
+    // generate CSV based on collected data
     pm.helper().generateCSVFile('./test-results/open_pull_requests', dataCSV)
   })
 })

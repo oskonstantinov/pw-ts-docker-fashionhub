@@ -18,7 +18,7 @@ test.describe('As a tester, ', () => {
   test('I want to check if an each link from the home page return expected source code', async ({ page, request, baseURL }) => {
     const pm = new PageManager(page, request)
 
-    // navigate to "Home page"
+    // open browser on the Home page
     await page.goto(pm.helper().getBaseUrl() + '/fashionhub/')
 
     // collect all links listed on "Home page" and validate their accessibility
